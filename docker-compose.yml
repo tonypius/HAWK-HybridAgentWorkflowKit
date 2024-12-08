@@ -1,0 +1,10 @@
+services:
+  chatbot-llama2:
+    build: .
+    restart: always
+    ports:
+      - "8520:8501"
+    volumes:
+    - ./:/app
+    mem_limit: "2g"
+    mem_reservation: "1g"
